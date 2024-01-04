@@ -19,6 +19,7 @@ body {
 }
 .gameTitle {
   margin-top: 60px;
+  color: #005b41;
 }
 
 .player1 {
@@ -44,16 +45,12 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  cursor: pointer;
+  background: #f9f7c9;
 }
 
 .msg {
   color: rgba(255, 0, 204, 0.8);
-}
-
-.player2 {
-  padding-top: 73px;
-  margin-bottom: 40px;
-  display: none;
 }
 
 .player2Input {
@@ -75,5 +72,20 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  display: none;
+  cursor: pointer;
+  background: #eef296;
+}
+.newGame {
+  color: #ffcc70;
+  background: #0f1035;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
   display: none;
 }
