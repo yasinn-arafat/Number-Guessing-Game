@@ -89,3 +89,24 @@ body {
   cursor: pointer;
   display: none;
 }
+
+/* ========= Responsive ======== */
+
+@media only screen and (max-width: 400px) {
+  .content {
+    width: 291px;
+    height: 483px;
+    margin-top: 39px;
+  }
+  .gameTitle {
+    margin-top: 43px;
+  }
+  .player1 {
+    padding-top: 6px;
+    margin-bottom: 24px;
+  }
+  .msg {
+    color: rgba(255, 0, 204, 0.8);
+    padding: 7px;
+  }
+}

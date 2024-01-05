@@ -51,3 +51,52 @@ startBtn.addEventListener("click", function () {
     msg.style.color = "red";
   }
 });
+
+// Guessing the number of Player 1
+
+guessBtn.addEventListener("click", function () {
+  if (
+    player2Input.value != "" &&
+    player2Input.value >= 0 &&
+    player2Input.value <= 10
+  ) {
+    chance--;
+    player2Msg.innerHTML = `Your Guess is Wrong & you have ${chance} Chances`;
+    player2Msg.style.color = "red";
+
+    if (player1Value === player2Input.value) {
+      player2Msg.innerHTML = "** 🏆 Winner 🏆 **";
+      player2Msg.style.fontSize = "xx-large";
+      player2Msg.style.color = "#F8DE22";
+      player2Input.style.display = "none";
+      guessBtn.style.display = "none";
+      //   Visible New game Button
+      newGame.style.display = "block";
+      // Add Event listener in newGame Button
+
+      newGame.addEventListener("click", function () {
+        location.reload();
+      });
+    } else if (chance === 0) {
+      player2Msg.innerHTML = "👎 Loser 👎";
+      player2Msg.style.fontSize = "xx-large";
+      player2Msg.style.color = "red";
+      player2Input.style.display = "none";
+      guessBtn.style.display = "none";
+
+      //   Visible New game Button
+
+      newGame.style.display = "block";
+      newGame.innerHTML = "Try Again";
+
+      // Add Event listener in newGame Button
+
+      newGame.addEventListener("click", function () {
+        location.reload();
+      });
+    }
+  } else {
+    player2Msg.innerHTML = `Please Insert a value between 0 - 10 <br> & You have ${chance} Chances`;
+    player2Msg.style.color = "red";
+  }
+});
